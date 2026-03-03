@@ -685,7 +685,7 @@
     async function loadMenu() {
         document.getElementById('menuContainer').innerHTML = '<div class="loading">Loading menu...</div>';
         try {
-            const res = await fetch('http://192.168.0.104:8080/api/menu');
+            const res = await fetch('https://vaanis-cafe.up.railway.app/api/menu');
             allItems = await res.json();
             renderMenu(allItems);
         } catch (e) {
